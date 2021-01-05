@@ -2,6 +2,7 @@ package br.com.etech.api.funcionalidades;
 
 import br.com.etech.commons.VariaveisEstaticas;
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
 import java.util.HashMap;
@@ -32,7 +33,7 @@ public class ByGeographicCoordinatesFuncionalidade {
                         .statusCode(200)
                         .extract().response();
 
-        VariaveisEstaticas.setBody(response.getBody().path("nome").toString());
+        VariaveisEstaticas.setBody(response.getBody().path("name").toString());
     }
 
 }

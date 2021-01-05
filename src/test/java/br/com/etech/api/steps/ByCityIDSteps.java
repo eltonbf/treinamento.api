@@ -24,6 +24,7 @@ public class ByCityIDSteps {
     }
 
 
+
     @Entao("^valido a cidade \"([^\"]*)\" no retorno do serviço$")
     public void validoACidadeNoRetornoDoServiço(String name){
         Assert.assertEquals(name, VariaveisEstaticas.getBody());
